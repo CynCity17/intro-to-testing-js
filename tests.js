@@ -7,15 +7,12 @@ describe('sayHello', function() {
       expect(typeof sayHello()).toBe("string");
     });
     it('should return the string "Hello, Jane!" when executed', function() {
-        expect(sayHello()).toBe("Hello, Jane!");
+        expect(sayHello("Jane")).toBe("Hello, Jane!");
     });
     it('should return the string "Hello, Alex!" when executed', function() {
-        expect(sayHello()).not.toBe("Hello, Alex!");
+        expect(sayHello("Alex")).toBe("Hello, Alex!");
     });
     it('should return the string "Hello, Pat!" when executed', function() {
-        expect(sayHello()).not.toBe("Hello, Pat!");
-    });
-    it("should never return 'undefined' when called", function() {
-      expect(helloWorld()).not.toBe(undefined);
+        expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
 });
